@@ -1,17 +1,17 @@
-first_value: str = input('Input first value: ')
-operation: str = input('Input math operation: ')
-second_value: str = input('Input second value ')
+email: str = input('Input email')
 
-for value in {first_value, second_value}:
-    if not value.isdigit():
-        print(f'Value of type {type(value)} {value} is not a digit')
-        sys.exit(0)
-        first_value: int = int(first_value)
-        second_value: int = int(second_value)
-        if operation == '+':
-            print(first_value + second_value)
-        elif operation == '-':
-            print(first_value - second_value)
-        else:
-            print(f'Invalid operation {operation}')
+if '@' not in email:
+    print('Invalid')
+    sys.exit(0)
+if '.' not in email:
+    print('Invalid')
+    sys.exit(0)
+    at_sign_index = email.index('@')
+    for sign in {'.', '@'}:
+        if email[at_sign_index + 1] == sign or email[at_sign_index - 1] == sign:
+            print('Invalid')
+            sys.exit(0)
+        elif email[-1] == sign or email[0] ==sign:
+            print('Invalid')
+            sys.exit(0)ion}')
 
